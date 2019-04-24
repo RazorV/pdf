@@ -1,0 +1,12 @@
+version: '2'
+services:
+  pdf:
+    build: .
+    command: npm start
+    ports:
+      - '3337:3333'
+    volumes:
+      - .:/app
+      - ./files:/app/files
+volumes:
+  files:
